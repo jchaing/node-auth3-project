@@ -10,7 +10,7 @@ module.exports = (req, res, next) => {
         res.status(401).json({message: 'Thou shall not pass!'})
       } else {
         req.decodedJwt = decodedToken;
-        console.log('req.decodedJwt', req.decodedJwt);
+        // console.log('req.decodedJwt', req.decodedJwt);
         next();
       }
     })
